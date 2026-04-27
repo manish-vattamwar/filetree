@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "filetree-cli"
+version = "0.1.0"
+description = "See your project at a glance. An open-source CLI tool that beautifully renders your directory structure with icons."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Manish" }
+]
+dependencies = [
+    "click>=8.0.0",
+    "rich>=13.0.0",
+    "pathspec>=0.11.0",
+    "pyperclip>=1.8.0",
+    "textual>=0.40.0",
+]
+
+[project.scripts]
+filetree = "filetree.cli:cli"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "ruff>=0.1.0",
+    "build",
+    "twine",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/filetree"]
