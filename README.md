@@ -26,9 +26,17 @@
 
 ## 📦 Installation
 
+**Recommended (CLI tool):**
+```bash
+pipx install filetree-cli
+```
+
+**Or with pip (inside a virtualenv):**
 ```bash
 pip install filetree-cli
 ```
+
+> 💡 On Ubuntu/Debian, install `pipx` first: `sudo apt install pipx && pipx ensurepath`
 
 ---
 
