@@ -134,18 +134,28 @@ def cli(path, all_files, depth, dirs_only, exclude, include, find, size, modifie
 
     config = get_default_config()
 
-    if not all_files:   all_files   = config.get("all", False)
-    if not dirs_only:   dirs_only   = config.get("dirs_only", False)
-    if not size:        size        = config.get("size", False)
-    if not modified:    modified    = config.get("modified", False)
-    if not permissions: permissions = config.get("permissions", False)
-    if not git:         git         = config.get("git", False)
-    if not stats:       stats       = config.get("stats", False)
-    if not interactive: interactive = config.get("interactive", False)
+    if not all_files:
+        all_files = config.get("all", False)
+    if not dirs_only:
+        dirs_only = config.get("dirs_only", False)
+    if not size:
+        size = config.get("size", False)
+    if not modified:
+        modified = config.get("modified", False)
+    if not permissions:
+        permissions = config.get("permissions", False)
+    if not git:
+        git = config.get("git", False)
+    if not stats:
+        stats = config.get("stats", False)
+    if not interactive:
+        interactive = config.get("interactive", False)
     if sort_by == "name" and "sort" in config:
         sort_by = config.get("sort", "name")
-    if not no_icons:    no_icons    = config.get("no_icons", False)
-    if not no_color:    no_color    = config.get("no_color", False)
+    if not no_icons:
+        no_icons = config.get("no_icons", False)
+    if not no_color:
+        no_color = config.get("no_color", False)
 
     exclude_list = list(exclude) + config.get("exclude", [])
     include_list = list(include) + list(find) + config.get("include", [])

@@ -1,4 +1,3 @@
-import pytest
 from filetree.walker import TreeWalker
 
 def test_walker_basic(tmp_path):
@@ -14,12 +13,12 @@ def test_walker_basic(tmp_path):
     
     assert len(nodes) == 2
     assert nodes[0].entry.name == "dir1"
-    assert nodes[0].entry.is_dir == True
+    assert nodes[0].entry.is_dir
     assert len(nodes[0].children) == 1
     assert nodes[0].children[0].entry.name == "file2.txt"
-    
+
     assert nodes[1].entry.name == "file1.txt"
-    assert nodes[1].entry.is_dir == False
+    assert not nodes[1].entry.is_dir
 
 def test_walker_gitignore(tmp_path):
     (tmp_path / "file.txt").write_text("hi")

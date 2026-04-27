@@ -13,7 +13,6 @@ from textual.app import App, ComposeResult
 from textual.binding import Binding
 from textual.widgets import Header, Footer, Tree, Label
 from textual.widgets.tree import TreeNode as TextualTreeNode
-from textual.containers import VerticalScroll
 from pathlib import Path
 from typing import List
 

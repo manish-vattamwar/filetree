@@ -2,11 +2,10 @@
 Directory walking engine.
 """
 
-import os
 import subprocess
 from pathlib import Path
 from dataclasses import dataclass
-from typing import List, Optional, Tuple, Dict
+from typing import List, Optional, Dict
 import pathspec
 import fnmatch
 

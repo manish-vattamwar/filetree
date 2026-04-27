@@ -21,10 +21,14 @@ SPACE = "    "
 def get_git_icon(status_code: str) -> str:
     if not status_code:
         return ""
-    if status_code == "??": return "❓"
-    if status_code.startswith("M") or status_code.endswith("M"): return "✏️"
-    if status_code.startswith("A"): return "✨"
-    if status_code.startswith("D") or status_code.endswith("D"): return "🗑️"
+    if status_code == "??":
+        return "❓"
+    if status_code.startswith("M") or status_code.endswith("M"):
+        return "✏️"
+    if status_code.startswith("A"):
+        return "✨"
+    if status_code.startswith("D") or status_code.endswith("D"):
+        return "🗑️"
     return "📝"
 
 class TreeRenderer:
@@ -72,9 +76,12 @@ class TreeRenderer:
             if self.show_modified:
                 row.append(format_time(st.st_mtime))
         except OSError:
-            if self.show_permissions: row.append("")
-            if self.show_size: row.append("")
-            if self.show_modified: row.append("")
+            if self.show_permissions:
+                row.append("")
+            if self.show_size:
+                row.append("")
+            if self.show_modified:
+                row.append("")
             
         table.add_row(*row)
 
@@ -152,7 +159,8 @@ class TreeRenderer:
                 for node in nodes_list:
                     if not node.entry.is_dir:
                         ext = Path(node.entry.name).suffix.lower()
-                        if not ext: ext = "no extension"
+                        if not ext:
+                            ext = "no extension"
                         ext_sizes[ext] = ext_sizes.get(ext, 0) + node.entry.size
                     walk_stats(node.children)
             walk_stats(nodes)
