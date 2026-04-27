@@ -5,7 +5,7 @@ Thank you for your interest in contributing to FileTree! 🌳
 ## How to Contribute
 
 ### Reporting Bugs
-- Search [existing issues](../../issues) first to avoid duplicates.
+- Search [existing issues](https://github.com/manish-vattamwar/filetree/issues) first to avoid duplicates.
 - Use the **Bug Report** issue template.
 - Include your OS, Python version, and terminal info.
 
